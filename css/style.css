@@ -36,3 +36,8 @@ span:hover{
 .active{
 text-decoration: line-through;
 }
+
+.testovuoto{
+    text-align: center;
+    font-size: 22px;
+}

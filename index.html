@@ -16,10 +16,12 @@
     <h1>To Valerio list</h1>
 
     <div id="app">
-       <input v-model="newtodo.testo"  type="text" placeholder="Cosa vuoi fare oggi......?">
+       <input @keyup.enter="aggiungitod" v-model="newtodo.testo"  type="text" placeholder="Cosa vuoi fare oggi......?">
        <button @click="aggiungitod" >Aggiungi</button>
-
-       <ul>
+        <div class="testovuoto" v-if="todoList.length === 0">
+            LA LISTA è VUOTA,COSA VUOI FARE?...
+        </div>
+       <ul v-else>
            <li v-for="todo,i in todoList" :class="todo.done === true ?'active': ''" :key="i">
                 {{todo.testo}}  
                 <span @click="toglirig(i)"> &#10003;</span>   
