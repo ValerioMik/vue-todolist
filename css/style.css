@@ -10,10 +10,10 @@ h1{
 }
 
 #app{
-    width: 50%;
+    width: 37%;
     margin: 0 auto;
     background-color: aquamarine;
-    height: 500px;
+    height: auto;
 }
 
 input{
@@ -33,3 +33,6 @@ span:hover{
     cursor: pointer;
 }
 
+.active{
+text-decoration: line-through;
+}

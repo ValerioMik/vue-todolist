@@ -47,13 +47,13 @@ var app = new Vue(
             eliminatodo(index){
                 this.todoList.splice(index,1)
             },
-            toglirigaz(){
-                if(todoList.done === false){
-                    todoList.done = true
-                }else{
-                    
+            toglirig(index){
+                if(this.todoList[index].done){
+                    this.todoList[index].done = false;
+                }else {
+                    this.todoList[index].done = true;
                 }
-            }
+            },
         
         }
     }
